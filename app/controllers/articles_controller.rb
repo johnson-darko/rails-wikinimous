@@ -25,8 +25,8 @@ class ArticlesController < ApplicationController
 
 
 	def destroy
-		@article.update(article_params)
-		redirect_to article_path(@article)
+		@article.destroy
+		redirect_to articles_path, status: :see_other
 	end
 
 	private
